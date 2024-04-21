@@ -1,14 +1,4 @@
-# JAX-RS Template Application
+# Laboratorio-JPA Agregar anotacion @OneToMany
 
-This is a template for a lightweight RESTful API using JAX-RS. The sample code is a call for getting the current time.
-    
-## Running the application locally
-
-First build with:
-
-    $mvn clean install
-
-Then run it with:
-
-    $ java -cp target/classes:target/dependency/* com.example.Main
-
+Al agregar la anotación @OneToMany en la entidad Competitor para establecer una relación de uno a muchos con la entidad Producto, se produce un efecto significativo en la tabla que se crea para la entidad Producto en la base de datos. Esta anotación indica que un competidor puede tener múltiples productos, lo que se refleja en la estructura de la tabla. En términos de la base de datos, esto generalmente se implementa mediante la adición de una columna en la tabla de Producto que hace referencia a la clave primaria de la tabla Competitor. 
+Esta columna se conoce como una clave externa (foreign key). Así, cada entrada en la tabla Producto ahora puede estar asociada con una fila correspondiente en la tabla Competitor, permitiendo así establecer y mantener esta relación uno a muchos entre competidores y sus productos de manera eficiente. Esta configuración es fundamental para modelar relaciones complejas en bases de datos relacionales y facilita la recuperación y manipulación de datos relacionados en aplicaciones.
